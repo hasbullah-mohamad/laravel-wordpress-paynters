@@ -1,0 +1,18 @@
+.preformatted {
+    
+    blockquote {
+        
+        color: #2955B3;
+        font-size: 20px;
+        line-height: 1.2;
+
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            border-top: 1px solid transparentize(black, 0.5);
+            margin: 1em 0;
+        }
+    }
+
+}

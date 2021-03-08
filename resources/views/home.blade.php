@@ -1,0 +1,10 @@
+@extends('layouts.app')
+@section ('content')
+  @include ('components.home-hero')
+  @include ('components.home-card-carousel')
+  @include ('shared.about')
+  @include ('shared.projects')
+  @include ('shared.latest-news')
+  @include ('shared.awards')
+  @include ('components.modal-project-detail')
+@endsection

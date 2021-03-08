@@ -1,0 +1,27 @@
+.accordian {
+  box-shadow: $box-shadow;
+  .card-header {
+    height: 75px;
+    cursor: pointer;
+    background-color: $white;
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+    color: $info;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+      font-family: 'paynters-icon';
+      content: "\e91c";
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        content: "\e919";
+      }
+    }
+  }
+  .card-body {
+    background-color: $light;
+    border-bottom: 1px solid $border-color;
+  }
+}

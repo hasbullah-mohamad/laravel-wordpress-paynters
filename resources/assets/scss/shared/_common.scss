@@ -1,0 +1,90 @@
+body {
+  font-size: $font-size-base * .875;
+  vertical-align: middle;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  transition: color .3s ease;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-icon {
+  text-align: left;
+  position: relative;
+  span {
+    margin-right: 72px;
+  }
+  .icon {
+    position: absolute;
+    right: $btn-padding-x - 4px;
+    font-size: 30px;
+    margin-top: -(30px - $font-size-base)/2;
+  }
+}
+
+.container-plus {
+  @include media-breakpoint-up('xl') {
+    max-width: 992px !important;
+  }
+}
+
+.page-link {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  padding-bottom: 57.5%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  
+  img {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.flex-image {
+  @extend .image;
+  padding-bottom: 0;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.logo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -1em;
+  margin-top: -1em;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+}
+
+.site-content {
+  img[class*="align"],
+  img[class*="wp-image-"] {
+    height: auto !important;
+  }
+}

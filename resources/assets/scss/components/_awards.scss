@@ -1,0 +1,46 @@
+.awards {
+  .awards-slider {
+    &.slick-dotted.slick-slider {
+      margin-bottom: -10px;
+    }
+  }
+  .awards-control {
+    .slick-dots {
+      position: relative;
+      bottom: inherit;
+      text-align: left;
+      li {
+        &.slick-active {
+          button {
+            &:before {
+              background-image: url('../img/triangle-fill.svg');
+            }
+          }
+        }
+        button {
+          &:before {
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-image: url('../img/triangle.svg');
+            background-position: center;
+            background-size: contain;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+  .thumbnail {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    @include media-breakpoint-up('md') {
+      padding-bottom: 100%;
+    }
+    @include media-breakpoint-down('md') {
+      padding-bottom: 65%;
+    }
+  }
+}

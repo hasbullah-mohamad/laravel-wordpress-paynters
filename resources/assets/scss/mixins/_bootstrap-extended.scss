@@ -1,0 +1,7 @@
+@mixin make-container() {
+  width: 100%;
+  padding-right: $container-gutter-width !important;
+  padding-left: $container-gutter-width !important;
+  margin-right: auto;
+  margin-left: auto;
+};

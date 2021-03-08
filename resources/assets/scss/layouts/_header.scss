@@ -1,0 +1,30 @@
+.site-header {
+  position: relative;
+  z-index: $header-z-index;
+  &.site-header-main {
+    &:before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      width: 116px;
+      height: 174px;
+      @include media-breakpoint-down('md') {
+        width: 80px;
+        height: 120px;
+      }
+      background: url('../img/brand-top-left.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.site-header-primary {
+    .container {
+      @media screen and (min-width: 1640px) {
+        max-width: 1600px;
+      }
+      @media screen and (max-width: 1640px) {
+        max-width: 1188px;
+      }
+    }
+  }
+}

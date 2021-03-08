@@ -1,0 +1,61 @@
+.floating {
+  @include media-breakpoint-up('xl') {
+    display: flex;
+  }
+  .floating-left {
+    max-width: 100%;
+  }
+  .floating-content {
+    @include media-breakpoint-up('xl') {
+      flex: 1;
+      margin-left: -50px;
+      margin-top: 40px;
+    }
+  }
+
+  .floating-card {
+    position: relative;
+    display: none;
+    max-width: 100%;
+    width: 377px;
+    padding: 63px 99px 63px 106px;
+    letter-spacing: 1.65px;
+    @include media-breakpoint-up('xl') {
+      display: block;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      border-bottom: 24px solid $secondary;
+      border-left: 24px solid transparent;
+      z-index: -1;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $secondary;
+      z-index: -1;
+    }
+  }
+
+  &.floating-projects {
+    margin-left: -94px;
+    @include media-breakpoint-down('sm') {
+      margin-left: 0;
+    }
+    .floating-content {
+      @include media-breakpoint-up('xl') {
+        margin-top: 120px;
+      }
+    }
+  }
+}

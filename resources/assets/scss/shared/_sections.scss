@@ -1,0 +1,42 @@
+.section-top {
+  margin-top: -104px;
+  z-index: 2;
+  position: relative;
+  .container {
+    @media screen and (min-width: 1640px) {
+      max-width: 1600px;
+    }
+    @media screen and (max-width: 1640px) {
+      max-width: 1188px;
+    }
+  }
+}
+
+.section-about {
+  .logo-lattice {
+    img {
+      @include media-breakpoint-down('md') {
+        width: 100px;
+        height: 150px;
+      }
+      @include media-breakpoint-up('md') {
+        width: 186px;
+        height: 280px;
+      }
+    }
+  }
+  .logo {
+    img {
+      width: 140px;
+      height: 41px;
+      @include media-breakpoint-down('md') {
+        width: 120px;
+        height: 36px;
+      }
+      @include media-breakpoint-up('md') {
+        width: 140px;
+        height: 41px;
+      }
+    }
+  }
+}

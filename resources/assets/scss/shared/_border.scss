@@ -1,0 +1,30 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .border#{$infix}-triangle {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        border-top: 0 solid transparent;
+        border-bottom: 54px solid transparent;
+        border-left: 54px solid;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+        border-top: 54px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-right: 54px solid;
+      }
+    }
+  }
+}

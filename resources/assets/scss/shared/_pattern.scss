@@ -1,0 +1,46 @@
+@each $style in $lattice-styles {
+  .bg-lattice-#{$style} {
+    background: url('../img/lattice-' + $style + '.svg') repeat;
+    background-size: 54px 54px;
+    background-position: top center;
+    border-bottom: 1px solid theme-color($style);
+  }
+
+  .pattern-lattice-#{$style} {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      background: url('../img/lattice-' + $style + '.svg') repeat;
+      border-right: 1px solid theme-color($style);
+      border-bottom: 1px solid theme-color($style);
+      background-size: 60px 60px;
+      background-position: right top;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.pattern-lattice-sm {
+  &:before {
+    left: -1000px;
+    height: 240px;
+  }
+}
+
+.pattern-lattice-base {
+  &:before {
+    left: -1000px;
+    height: 474px;
+  }
+}
+
+.pattern-lattice-fill {
+  position: relative;
+  &:before {
+    bottom: 0;
+    left: -1000px;
+  }
+}

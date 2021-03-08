@@ -1,0 +1,19 @@
+version: '2'
+services:
+  app:
+    image: paynters
+    build:
+      context: ../../
+      dockerfile: .docker/local/Dockerfile
+    volumes:
+      - ../../:/app/
+    environment:
+      - APP_DEBUG=true
+      - DB_DATABASE=paynters
+      - DB_USERNAME=root
+      - DB_PASSWORD=
+      - DB_HOST=docker.for.mac.host.internal
+      - APP_URL=http://mac.test:8088
+      - CACHE_DRIVER=array
+    ports:
+      - "8088:80"
